@@ -1,0 +1,2 @@
+# We neither have Cinnamon or Unity
+rm -rf %{buildroot}%{_datadir}/themes/*/{unity,cinnamon}
