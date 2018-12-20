@@ -1,0 +1,31 @@
+From 377c15adfd127bcae8470e3fe708652de098bac6 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@intel.com>
+Date: Thu, 20 Dec 2018 16:10:48 +0000
+Subject: [PATCH] Add a Makefile to help installation
+
+Signed-off-by: Ikey Doherty <ikey.doherty@intel.com>
+---
+ Makefile | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..981324f
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,11 @@
++datadir ?= /usr/share
++
++dummy:
++
++install-data:
++	mkdir -p $(DESTDIR)$(datadir)/themes/
++	./install.sh --dest $(DESTDIR)$(datadir)/themes
++
++install: install-data
++
++.PHONY: dummy
+-- 
+2.20.0
+
